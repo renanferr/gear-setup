@@ -19,7 +19,6 @@ import java.util.List;
 @Singleton
 public class GearSetupPanel extends PluginPanel {
     private final GearSetupPlugin plugin;
-    private final JPanel phasesView = new JPanel(new GridBagLayout());
 
     private static final ImageIcon RESET_ICON;
     private static final ImageIcon RESET_HOVER_ICON;
@@ -51,8 +50,6 @@ public class GearSetupPanel extends PluginPanel {
         JPanel centerPanel = new JPanel(new BorderLayout());
         centerPanel.setBackground(ColorScheme.DARK_GRAY_COLOR);
 
-        phasesView.setBackground(ColorScheme.DARK_GRAY_COLOR);
-
         GridBagConstraints constraints = new GridBagConstraints();
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.weightx = 1;
@@ -63,8 +60,6 @@ public class GearSetupPanel extends PluginPanel {
         reset.setToolTipText("Gear Setup");
         reset.setRolloverIcon(RESET_HOVER_ICON);
         reset.addActionListener(l -> this.onReset());
-
-        centerPanel.add(phasesView, BorderLayout.CENTER);
 
         add(northPanel, BorderLayout.NORTH);
         add(centerPanel, BorderLayout.CENTER);
@@ -84,8 +79,6 @@ public class GearSetupPanel extends PluginPanel {
         constraints.weightx = 1;
         constraints.gridx = 0;
         constraints.gridy = 0;
-
-        phasesView.removeAll();
 
         JPanel ip = new JPanel(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
