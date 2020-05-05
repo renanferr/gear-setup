@@ -1,11 +1,11 @@
-package com.example;
+package com.gearsetup;
 
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 
 @ConfigGroup("example")
-public interface ExampleConfig extends Config
+public interface GearSetupConfig extends Config
 {
 	@ConfigItem(
 		keyName = "greeting",
@@ -16,4 +16,5 @@ public interface ExampleConfig extends Config
 	{
 		return "Hello";
 	}
+
 }
